@@ -73,7 +73,7 @@ var info={
 to:result.email,
 subject:"please click on this ink to verify",
 //this html is property which we used to send html elements
-html:"<a href="+"http://localhost:3000/verify/"+result._id+">click to verify you<a>"
+html:"<a href="+"http://mailsystem1.herokuapp.com/verify/"+result._id+">click to verify you<a>"
 }
 smtpTransporter.sendMail(info, function(error, info){
   if (error) {
@@ -113,7 +113,7 @@ var info={
 to:result.email,
 subject:"please click on this ink to verify",
 //this html is property which we used to send html elements
-html:"<a href="+"http://localhost:3000/verify/"+result._id+">click to verify you<a>"
+html:"<a href="+"http://mailsystem1.herokuapp.com/verify/"+result._id+">click to verify you<a>"
 }
 smtpTransporter.sendMail(info, function(error, info){
   if (error) {
