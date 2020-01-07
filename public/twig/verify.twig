@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+{#agar is twig ki files ma jitney bhi if lagi hoi agar in ma say akk bhi if true ho gai to woh show ho jai gai
+other wise not shown the if condition
+agar akk if true ho jati hay to us ka hi message display ho gay or ifs ka display none hi rahay gay#}
+
+{#for displaying message on signup if user already registers with these credentials This user is already taken#}
+{% if message1 %}
+<div class="container">
+<div class="alert alert-danger">
+<p class="lead">{{message1}}</p>
+</div>
+</div>
+{% endif %}
+
+
+{#for displaying message Please check your email to confirm email address#}
+{% if message2 %}
+<div class="container">
+<div class="alert alert-success">
+<p class="lead">{{message2}}</p>
+</div>
+</div>
+{% endif %}
+
+{#for displaying message if user click on link and authenticate#}
+{% if message3 %}
+<div class="container">
+<div class="alert alert-success">
+<p class="lead">{{message3}}</p>
+</div>
+</div>
+{% endif %}
+
+
+
+{#for displaying message if emials successfully send when user click on resend button#}
+{% if message4 %}
+<div class="container">
+<div class="alert alert-success">
+<p class="lead">{{message4}}</p>
+</div>
+</div>
+{% endif %}
+
+
+
+{#for displaying message if user not found on login#}
+{% if message5 %}
+<div class="container">
+<div class="alert alert-success">
+<p class="lead">{{message5}}</p>
+</div>
+</div>
+{% endif %}
+
+{#for displaying message if user  found on login  but not authenticate#}
+{% if message6 %}
+<div class="container">
+<div class="alert alert-success">
+<p class="lead">{{message6}}</p>
+</div>
+</div>
+{% endif %}
+
+
+
+
+
+
+
+{#for displaying resend send link message#}
+{% if message %}
+<div class="container">
+<div class="alert alert-danger">
+<p class="lead"><strong>Info!</strong>{{message}}</p><br>
+
+{% for user in data %}
+<a href="/resend/verify/{{user._id}}" class="btn btn-danger">Resend Link</a>
+{% endfor %}
+</div>
+</div>
+{% endif %}
+
+</body>
+</html>
