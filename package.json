@@ -1,7 +1,7 @@
 {
   "name": "varifyemail",
   "version": "1.0.0",
-  "description": "node app",
+  "description": "node app ",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
