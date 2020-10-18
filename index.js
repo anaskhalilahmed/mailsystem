@@ -49,6 +49,14 @@ res.sendFile(__dirname+"/public"+"/verify.html");
 
 
 
+
+app.get("/.well-known/pki-validation/09CC293A57DF324324A175593E03162C.txt",function(req,res){
+res.sendFile(__dirname+"/public"+"/.well-known"+"/pki-validation"+"/09CC293A57DF324324A175593E03162C.txt");
+});
+
+
+
+
 app.post("/send",function(req,res){
 SignModel.find({name:req.body.name,email:req.body.email},function(err,result){
 //if user already exist so show message that user is already taken
