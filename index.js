@@ -166,9 +166,9 @@ else{
 
 
 var server=https.createServer({
-    key:fs.readFileSync(path.join(__dirname,'cert','private.key')),
-    cert:fs.readFileSync(path.join(__dirname,'cert','certificate.crt')),
-    ca:fs.readFileSync(path.join(__dirname,'cert','ca_bundle.crt')),
+    key:fs.readFileSync(path.join(__dirname,'public','cert','private.key')),
+    cert:fs.readFileSync(path.join(__dirname,'public','cert','certificate.crt')),
+    ca:fs.readFileSync(path.join(__dirname,'public','cert','ca_bundle.crt')),
 },app);
 
 server.listen(process.env.PORT||3000);
