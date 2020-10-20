@@ -1,7 +1,5 @@
 var express=require('express');
 const https=require('https');
-const path=require('path');
-const fs=require('fs');
 var app=express();
 //note before using nodemailer turn on less secured app
 var nodemailer=require('nodemailer');
@@ -165,10 +163,6 @@ else{
 
 
 
-var server=https.createServer({
-    key:fs.readFileSync(path.join(__dirname,'public','cert','private.key')),
-    cert:fs.readFileSync(path.join(__dirname,'public','cert','certificate.crt')),
-    ca:fs.readFileSync(path.join(__dirname,'public','cert','ca_bundle.crt')),
-},app);
+var server=https.createServer(app);
 
 server.listen(process.env.PORT||3000);
